@@ -1,0 +1,46 @@
+{
+  "name": "ngcli-wrapper",
+  "version": "0.0.1",
+  "description": "CLI Wrapper for ng cli",
+  "main": "bin/ngcli-wrapper.js",
+  "repository": "https://github.com/marcojahn/ngcli-wrapper.git",
+  "author": "Marco Jahn <marco.jahn@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --fix lib/**/*.js packages/**/bin/* test/**/*.js",
+    "test": "jest"
+  },
+  "gitHooks": {
+    "pre-commit": "./node_modules/.bin/lint-staged"
+  },
+  "lint-staged": {
+    "lib/**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      ".*.helper.js"
+    ],
+    "logHeapUsage": true
+  },
+  "dependencies": {
+    "chalk": "^2.3.1",
+    "commander": "^2.14.1",
+    "debug": "^3.1.0",
+    "execa": "^0.9.0",
+    "inquirer": "^5.1.0",
+    "minimist": "^1.2.0",
+    "semver": "^5.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "jest": "^22.4.2",
+    "lint-staged": "^7.0.0",
+    "yorkie": "^1.0.3"
+  }
+}
