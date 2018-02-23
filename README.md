@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/marcojahn/ngcli-wrapper.svg?branch=master](https://travis-ci.org/marcojahn/ngcli-wrapper)
-
-
+[![Build Status](https://travis-ci.org/marcojahn/ngcli-wrapper.svg?branch=master)](https://travis-ci.org/marcojahn/ngcli-wrapper)
 
 # ngcli-wrapper
 Wrapper around angular-cli (for testing purposes)
